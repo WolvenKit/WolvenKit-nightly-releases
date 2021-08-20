@@ -1,2 +1,10 @@
 # WolvenKit-nightly-releases
-Provides WolvenKit nightly releases.
+Provides WolvenKit nightly releases. Nightlies are beta releases so you may encounter bugs. Please report them. 
+
+These builds are generated every day at 12:00am UTC. Please download the newest one.
+
+-------------
+| Package | Latest Stable | Latest Nightly | Checks |
+| ------- | ------------ | ----------------- | --------- |
+| [WolvenKit](https://github.com/WolvenKit/WolvenKit/) | [![GitHub release (latest by date)](https://img.shields.io/github/v/release/WolvenKit/WolvenKit)](https://github.com/WolvenKit/WolvenKit/releases/latest) | [![GitHub release (latest by date)](https://img.shields.io/github/v/release/WolvenKit/WolvenKit-nightly-releases)](https://github.com/WolvenKit/WolvenKit-nightly-releases/releases/latest) | ![GitHub branch checks state](https://img.shields.io/github/checks-status/WolvenKit/WolvenKit/master) |
+
