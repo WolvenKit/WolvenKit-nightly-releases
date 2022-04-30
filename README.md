@@ -1,5 +1,5 @@
 # WolvenKit-nightly-releases
-Provides WolvenKit nightly releases. Nightlies are beta releases so you may encounter bugs. Please report them. 
+Provides WolvenKit nightly releases. Nightlies are beta releases so you may encounter bugs. Please report them [at the main repository](https://github.com/WolvenKit/WolvenKit/issues). 
 
 These builds are generated every day at 12:00am UTC. Please download the newest one.
 
