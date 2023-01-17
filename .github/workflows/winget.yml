@@ -1,0 +1,21 @@
+name: Winget
+
+on:
+  release:
+    types: [published]
+
+env:
+  packageFileName: WolvenKit.NightlySetup-*.exe
+  packageId: REDModding.WolvenKit.Nightly
+  
+jobs:  
+  winget:
+    name: Publish winget package
+    runs-on: windows-latest
+    steps:    
+    - name: Submit package to Windows Package Manager Community Repository
+      run: |
+        iwr https://aka.ms/wingetcreate/latest -OutFile wingetcreate.exe
+        $github = Get-Content '${{ github.event_path }}' | ConvertFrom-Json
+        $installerUrl = $github.release.assets | Where-Object -Property name -Like ${env:packageFileName} | Select -ExpandProperty browser_download_url -First 1
+        .\wingetcreate.exe update ${env:packageId} -s -v $github.release.tag_name -u $installerUrl -t ${{ secrets.PAT_WINGET }}
