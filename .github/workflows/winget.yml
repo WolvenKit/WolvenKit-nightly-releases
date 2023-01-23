@@ -13,6 +13,10 @@ jobs:
     name: Publish winget package
     runs-on: windows-latest
     steps:
+    - name: dbg
+      run: |
+        $github = Get-Content '${{ github.event_path }}'
+        $github
     - name: Submit package to Windows Package Manager Community Repository
       run: |
         iwr https://aka.ms/wingetcreate/latest -OutFile wingetcreate.exe
