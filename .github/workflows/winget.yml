@@ -12,14 +12,7 @@ jobs:
   winget:
     name: Publish winget package
     runs-on: windows-latest
-    steps:    
-    
-    - name: dbg
-      run: |
-        $gh = Get-Content '${{ github.event_path }}' | ConvertFrom-Json
-        $na = $gh.release.assets | Where-Object -Property name
-        $na
-    
+    steps:
     - name: Submit package to Windows Package Manager Community Repository
       run: |
         iwr https://aka.ms/wingetcreate/latest -OutFile wingetcreate.exe
