@@ -2,7 +2,7 @@ name: Winget
 
 on:
   release:
-    types: [published]
+    types: [edited, released]
 
 env:
   packageFileName: "*.exe"
